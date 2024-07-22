@@ -2,6 +2,7 @@
 É um projeto backend feito com o Framework AdonisJS, que faz o gerenciamento de clientes, endereço, telefone, produto e vendas. Abaixo listarei alguns requisitos e maneiras de rodar o projeto.
 
 </br>
+
 # Requisitos 📋
 Todos os links levam direto para o download.
 - [VS Code](https://code.visualstudio.com/docs/?dv=win64user)
@@ -194,6 +195,7 @@ Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma
 ```
 
 </br>
+
 O meu projeto acaba aqui, espero que tenha atendido as expectativas!! </br>
 Durante meu projeto usei como base um mapa mental que eu fiz no excalidraw https://excalidraw.com/#json=HZqxkIhVWPxezTs1Ut72m,QtvMbWZkZgwmxhLMoTLh6Q </br>
 Caso tenha algum problema na aplicação especifico entre em contato comigo de alguma forma seja por: </br>
