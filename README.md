@@ -12,6 +12,7 @@ Todos os links levam direto para o download.
 - [Insomnia](https://updates.insomnia.rest/downloads/windows/latest?app=com.insomnia.app&source=website)
   
 </br>
+
 # Entrando no projeto 🚀
 Para entrar no projeto primeiramente abra o VS Code e utilize esse comando no terminal(para abrir o terminal é "ctrl" +
 "shift" + " ' "), e cole o comando a seguir e dê enter.
@@ -78,9 +79,11 @@ Pronto agora seu banco está configurado e com informações dos seeders!!</br>
 Próximo vai ser como testar a aplicação.
 
 </br>
+
 # Testando o projeto
 
 </br>
+
 ## Rotas de Login
 No seu insomnia utilize a rota para se registrar, com o metodo POST:
 ```bash
@@ -105,7 +108,9 @@ Com o body:
 }
 ```
 Lembre-se a aplicação é protegida pelo token JWT que você adquiriu agora, então a qualquer rota que for acessar use o Auth e na parte de token coloque o que foi recebido da response. Caso tenha alguma dúvida o type é o "Bearer Token".
+
 </br>
+
 ## Rotas de Cliente
 Index: Lista todos os clientes ordenados pelo id, com o metodo GET:
 ```bash
@@ -142,6 +147,7 @@ localhost:3333/clients/2
 ```
 
 </br>
+
 ## Rotas de Produto
 Index: Mostra todos os produtos ordenados por ordem alfabetica, com o metodo GET:
 ```bash
@@ -183,6 +189,7 @@ localhost:3333/products/2
 ```
 
 </br>
+
 ## Rota de Sale
 Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma lógica onde a cada venda diminui a quantidade de tal produto comprado, além do total_price ser somando automáticamente, com o metodo POST.
 ```bash
