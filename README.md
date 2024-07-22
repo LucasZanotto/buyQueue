@@ -34,7 +34,7 @@ npm install -g @adonisjs/cli
 ```bash
 npm i
 ```
-⚠️Lembre de renomear o arquivo ".env.example" para apenas ".env".⚠️ </br>
+Lembre de renomear o arquivo ".env.example" para apenas ".env".</br>
 E caso já esteja usando a porta 3306 troque para outra de sua preferência. </br>
 Após isso rode esse comando para ligar o servidor.
 
@@ -74,7 +74,7 @@ Após isso volte ao terminal do VS Code e crie um novo terminal no "+" e rode es
 ```bash
 node ace migration:run
 ```
-Após isso vá para o MySQL Workbench e rode as outras linhas, sem rodar a primeira nem a segunda, ⚠️porém clickando naquele raiozinho ⚡⚠️</br>
+Após isso vá para o MySQL Workbench e rode as outras linhas, sem rodar a primeira nem a segunda, porém clickando naquele raiozinho ⚡</br>
 Pronto agora seu banco está configurado e com informações dos seeders!!</br>
 Próximo vai ser como testar a aplicação.
 
