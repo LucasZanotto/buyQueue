@@ -77,7 +77,7 @@ Após isso volte ao terminal do VS Code e crie um novo terminal no "+" e rode es
 ```bash
 node ace migration:run
 ```
-Após isso vá para o MySQL Workbench e rode as outras linhas, sem rodar a primeira.</br>
+Após isso vá para o MySQL Workbench e rode as outras linhas, sem rodar a primeira nem a segunda.</br>
 Pronto agora seu banco está configurado e com informações dos seeders!!</br>
 Próximo vai ser como testar a aplicação.
 
