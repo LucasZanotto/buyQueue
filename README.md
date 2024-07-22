@@ -40,6 +40,7 @@ Em seguida abra o MySQL Workbench, a senha para entrar será User: root, Passwor
 E Cole isso na Query:
 ```bash
 CREATE DATABASE adonis;
+USE adonis;
 
 INSERT INTO products (name, price, quantity, description) VALUES
 ('Geladeira', 10.45, 20, 'Eh uma geladeira duas portas'),
@@ -63,7 +64,8 @@ INSERT INTO sales (client_id, product_id, quantity, unit_price, total_price, dat
 (2, 2, 1, 40.40, 40.40, NOW());
 ```
 Você irá rodar a primeira linha individualmente selecionando apenas ela e pressionando "ctrl" + "Enter".</br>
-Em seguida você vai dar refresh no schema e clickar duas vezes no "adonis". Após isso volte ao terminal do VS Code e crie um novo terminal no "+" e rode esse comando:
+Em seguida você vai rodar a segunda linha individualmente selecionando apenas ela e pressionando "ctrl" + "Enter".</br>
+Após isso volte ao terminal do VS Code e crie um novo terminal no "+" e rode esse comando:
 ```bash
 node ace migration:run
 ```
