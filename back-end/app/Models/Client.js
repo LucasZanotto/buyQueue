@@ -1,20 +1,19 @@
 'use strict'
 
-/** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
-const Model = use('Model')
+const Model = use('Model');
 
 class Client extends Model {
     addresses () {
-        return this.hasMany('App/Models/Address')
+        return this.hasMany('App/Models/Address');
     }
 
     phones () {
-        return this.hasMany('App/Models/Phone')
+        return this.hasMany('App/Models/Phone');
     }
 
     sales () {
-        return this.hasMany('App/Models/Sale')
+        return this.hasMany('App/Models/Sale');
     }
 }
 
-module.exports = Client
+module.exports = Client;
