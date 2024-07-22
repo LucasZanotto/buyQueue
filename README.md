@@ -82,6 +82,7 @@ Pronto agora seu banco está configurado e com informações dos seeders!!</br>
 Próximo vai ser como testar a aplicação.
 
 # Testando o projeto
+## Rota de Login
 No seu insomnia utilize a rota para se registrar com POST
 ```bash
 localhost:3333/register
