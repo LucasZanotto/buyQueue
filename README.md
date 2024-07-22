@@ -30,11 +30,11 @@ npm install -g @adonisjs/cli
 ```bash
 npm i
 ```
-Lembre de renomear o ".env.example" para apenas ".env" apertando f2, e trocar o "DB_CONNECTION=" para
+Lembre de renomear o ".env.example" para apenas ".env" apertando f2, e trocar o "DB_CONNECTION=" para:
 ```bash
 DB_CONNECTION=mysql2
 ```
-Além de colocar o "DB_PASSWORD=" para 
+Além de colocar o "DB_PASSWORD=" para: 
 ```bash
 DB_PASSWORD=root
 ```
@@ -82,8 +82,8 @@ Pronto agora seu banco está configurado e com informações dos seeders!!</br>
 Próximo vai ser como testar a aplicação.
 
 # Testando o projeto
-## Rota de Login
-No seu insomnia utilize a rota para se registrar com POST
+## Rotas de Login
+No seu insomnia utilize a rota para se registrar, com o metodo POST:
 ```bash
 localhost:3333/register
 ```
@@ -94,7 +94,7 @@ Com o body:
 	"password": "123456"
 } 
 ```
-Logo em seguida use a rota login para pegar seu token de verificação com POST.
+Logo em seguida use a rota login para pegar seu token de verificação, com o metodo POST:
 ```bash
 localhost:3333/authenticate
 ```
@@ -105,59 +105,58 @@ Com o body:
 	"password": "123456"
 }
 ```
-Lembre-se a aplicação é protegida pelo token JWT que você adquiriu agora, então a qualquer rota que for acessar use o Auth e na parte de token coloque o que foi recebido da response. Caso tenha alguma dúvida o type é "Bearer Token"
+Lembre-se a aplicação é protegida pelo token JWT que você adquiriu agora, então a qualquer rota que for acessar use o Auth e na parte de token coloque o que foi recebido da response. Caso tenha alguma dúvida o type é o "Bearer Token".
 </br>
 ## Rotas de Cliente
-Index: Lista todos os clientes com GET
+Index: Lista todos os clientes, com o metodo GET:
 ```bash
 localhost:3333/clients
 ```
-Show: Detalha um cliente com GET
+Show: Detalha um cliente, com o metodo GET:
 ```bash
 localhost:3333/clients/1
 ```
-Store: Cria um cliente, vai precisar desse body com POST
+Store: Cria um cliente, vai precisar desse body, com o metodo POST:
+```bash
+localhost:3333/clients
+```
+Request do body para criar:
 ```bash
 {
 	"name": "lucas",
 	"cpf": "lucas@mail.com"
 }
 ```
-request para criar:
-```bash
-localhost:3333/clients
-```
-Update: Para atualizar algum campo do cliente com PATCH
-```bash
-{
-	"name": "lucaszanotto"
-}
-```
-request para criar:
+Update: Para atualizar algum campo do cliente, com o metodo PATCH:
 ```bash
 localhost:3333/clients/1
 ```
-Destroy: Para desabilitar um cliente com DELETE:
-request para criar:
+Request para criar no body:
+```bash
+{
+	"name": "lucas zanotto"
+}
+```
+Destroy: Para desabilitar um cliente, com o metodo DELETE:
 ```bash
 localhost:3333/clients/2
 ```
 </br>
 
 ## Rotas de Produto
-Index: Mostra todos os produtos com GET.
+Index: Mostra todos os produtos, com o metodo GET:
 ```bash
 localhost:3333/products
 ```
-Show: Detalha um produto especifico com GET.
+Show: Detalha um produto especifico, com o metodo GET:
 ```bash
 localhost:3333/products/1
 ```
-Store: Cria um novo produto com POST.
+Store: Cria um novo produto, com o metodo POST:
 ```bash
 localhost:3333/products
 ```
-o body da request:
+O body da request:
 ```bash
 {
 	"name": "Alface",
@@ -166,11 +165,11 @@ o body da request:
 	"description": "Alimento bom para o dia-a-dia"
 }
 ```
-Update: Atualiza alguma informação do produto com PATCH.
+Update: Atualiza alguma informação do produto através do seu id, com o metodo PATCH.
 ```bash
 localhost:3333/products/2
 ```
-o body da request:
+O body da request:
 ```bash
 {
 	"name": "Banana",
@@ -179,13 +178,13 @@ o body da request:
 	"description": "Alimento bom para o dia-a-dia"
 }
 ```
-Destroy: Desabilita um produto com DELETE.
+Destroy: Desabilita um produto, com o metodo DELETE.
 ```bash
 localhost:3333/products/2
 ```
 
 ## Rota de Sale
-Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma lógica onde a cada venda diminui a quantidade de tal produto comprado, além do total_price ser somando automáticamente com POST.
+Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma lógica onde a cada venda diminui a quantidade de tal produto comprado, além do total_price ser somando automáticamente, com o metodo POST.
 ```bash
 {
 	"client_id": 1,
@@ -196,6 +195,7 @@ Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma
 ```
 </br>
 O meu projeto acaba aqui, espero que tenha atendido as expectativas!! </br>
+Durante meu projeto usei como base um mapa mental que eu fiz no excalidraw https://excalidraw.com/#json=HZqxkIhVWPxezTs1Ut72m,QtvMbWZkZgwmxhLMoTLh6Q </br>
 Caso tenha algum problema na aplicação especifico entre em contato comigo de alguma forma seja por: </br>
 Email: lucasabatizanotto@gmail.com </br>
 Whatsapp: 49 999271760 </br>
