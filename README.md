@@ -67,6 +67,7 @@ Em seguida você vai dar refresh no schema e clickar duas vezes no "adonis". Ap�
 ```bash
 node ace migration:run
 ```
+Após isso vá para o MySQL Workbench e rode as outras linhas, sem rodar a primeira.</br>
 Pronto agora seu banco está configurado e com informações dos seeders!!</br>
 Próximo vai ser como testar a aplicação.
 
@@ -96,3 +97,94 @@ Com o body:
 Lembre-se a aplicação é protegida pelo token JWT que você adquiriu agora, então a qualquer rota que for acessar use o Auth e na parte de token coloque o que foi recebido da response. Caso tenha alguma dúvida o type é "Bearer Token"
 </br>
 ## Rotas de Cliente
+Index: Lista todos os clientes
+```bash
+localhost:3333/clients
+```
+Show: Detalha um cliente
+```bash
+localhost:3333/clients/1
+```
+Store: Cria um cliente, vai precisar desse body
+```bash
+{
+	"name": "lucas",
+	"cpf": "lucas@mail.com"
+}
+```
+request para criar:
+```bash
+localhost:3333/clients
+```
+Update: Para atualizar algum campo do cliente
+```bash
+{
+	"name": "lucaszanotto"
+}
+```
+request para criar:
+```bash
+localhost:3333/clients/1
+```
+Destroy: Para desabilitar um cliente:
+request para criar:
+```bash
+localhost:3333/clients/2
+```
+</br>
+
+## Rotas de Produto
+Index: Mostra todos os produtos.
+```bash
+localhost:3333/products
+```
+Show: Detalha um produto especifico.
+```bash
+localhost:3333/products/1
+```
+Store: Cria um novo produto.
+```bash
+localhost:3333/products
+```
+o body da request:
+```bash
+{
+	"name": "Alface",
+	"price": "10.50",
+	"quantity": 40,
+	"description": "Alimento bom para o dia-a-dia"
+}
+```
+Update: Atualiza alguma informação do produto.
+```bash
+localhost:3333/products/2
+```
+o body da request:
+```bash
+{
+	"name": "Banana",
+	"price": "10.50",
+	"quantity": 40,
+	"description": "Alimento bom para o dia-a-dia"
+}
+```
+Destroy: Desabilita um produto.
+```bash
+localhost:3333/products/2
+```
+
+## Rota de Sale
+Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma lógica onde a cada venda diminui a quantidade de tal produto comprado, além do total_price ser somando automáticamente.
+```bash
+{
+	"client_id": 1,
+	"product_id": 1,
+	"quantity": 2,
+	"unit_price": "20.50"
+}
+```
+</br>
+O meu projeto acaba aqui, espero que tenha atendido as expectativas!! </br>
+Caso tenha algum problema na aplicação especifico entre em contato comigo de alguma forma seja por: </br>
+Email: lucasabatizanotto@gmail.com </br>
+[Whatsapp](https://api.whatsapp.com/send?phone=5549999271760): 49 999271760
