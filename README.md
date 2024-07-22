@@ -72,7 +72,7 @@ Pronto agora seu banco está configurado e com informações dos seeders!!</br>
 Próximo vai ser como testar a aplicação.
 
 # Testando o projeto
-No seu insomnia utilize a rota para se registrar
+No seu insomnia utilize a rota para se registrar com POST
 ```bash
 localhost:3333/register
 ```
@@ -83,7 +83,7 @@ Com o body:
 	"password": "123456"
 } 
 ```
-Logo em seguida use a rota login para pegar seu token de verificação.
+Logo em seguida use a rota login para pegar seu token de verificação com POST.
 ```bash
 localhost:3333/authenticate
 ```
@@ -97,15 +97,15 @@ Com o body:
 Lembre-se a aplicação é protegida pelo token JWT que você adquiriu agora, então a qualquer rota que for acessar use o Auth e na parte de token coloque o que foi recebido da response. Caso tenha alguma dúvida o type é "Bearer Token"
 </br>
 ## Rotas de Cliente
-Index: Lista todos os clientes
+Index: Lista todos os clientes com GET
 ```bash
 localhost:3333/clients
 ```
-Show: Detalha um cliente
+Show: Detalha um cliente com GET
 ```bash
 localhost:3333/clients/1
 ```
-Store: Cria um cliente, vai precisar desse body
+Store: Cria um cliente, vai precisar desse body com POST
 ```bash
 {
 	"name": "lucas",
@@ -116,7 +116,7 @@ request para criar:
 ```bash
 localhost:3333/clients
 ```
-Update: Para atualizar algum campo do cliente
+Update: Para atualizar algum campo do cliente com PATCH
 ```bash
 {
 	"name": "lucaszanotto"
@@ -126,7 +126,7 @@ request para criar:
 ```bash
 localhost:3333/clients/1
 ```
-Destroy: Para desabilitar um cliente:
+Destroy: Para desabilitar um cliente com DELETE:
 request para criar:
 ```bash
 localhost:3333/clients/2
@@ -134,15 +134,15 @@ localhost:3333/clients/2
 </br>
 
 ## Rotas de Produto
-Index: Mostra todos os produtos.
+Index: Mostra todos os produtos com GET.
 ```bash
 localhost:3333/products
 ```
-Show: Detalha um produto especifico.
+Show: Detalha um produto especifico com GET.
 ```bash
 localhost:3333/products/1
 ```
-Store: Cria um novo produto.
+Store: Cria um novo produto com POST.
 ```bash
 localhost:3333/products
 ```
@@ -155,7 +155,7 @@ o body da request:
 	"description": "Alimento bom para o dia-a-dia"
 }
 ```
-Update: Atualiza alguma informação do produto.
+Update: Atualiza alguma informação do produto com PATCH.
 ```bash
 localhost:3333/products/2
 ```
@@ -168,13 +168,13 @@ o body da request:
 	"description": "Alimento bom para o dia-a-dia"
 }
 ```
-Destroy: Desabilita um produto.
+Destroy: Desabilita um produto com DELETE.
 ```bash
 localhost:3333/products/2
 ```
 
 ## Rota de Sale
-Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma lógica onde a cada venda diminui a quantidade de tal produto comprado, além do total_price ser somando automáticamente.
+Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma lógica onde a cada venda diminui a quantidade de tal produto comprado, além do total_price ser somando automáticamente com POST.
 ```bash
 {
 	"client_id": 1,
@@ -187,4 +187,5 @@ Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma
 O meu projeto acaba aqui, espero que tenha atendido as expectativas!! </br>
 Caso tenha algum problema na aplicação especifico entre em contato comigo de alguma forma seja por: </br>
 Email: lucasabatizanotto@gmail.com </br>
-- [Whatsapp](https://api.whatsapp.com/send?phone=5549999271760): 49 999271760
+Whatsapp: 49 999271760 </br>
+link: https://api.whatsapp.com/send?phone=5549999271760
