@@ -1,15 +1,17 @@
-# buyQueue
+# buyQueue 🛒
 É um projeto backend feito com o Framework AdonisJS, que faz o gerenciamento de clientes, endereço, telefone, produto e vendas. Abaixo listarei alguns requisitos e maneiras de rodar o projeto.
 
-# Requisitos
+</br>
+# Requisitos 📋
 Todos os links levam direto para o download.
 - [VS Code](https://code.visualstudio.com/docs/?dv=win64user)
 - [Node.js](https://nodejs.org/dist/v20.15.1/node-v20.15.1-x64.msi)
 - [MySQL](https://dev.mysql.com/get/Downloads/MySQL-8.4/mysql-8.4.1-winx64.msi)
 - [MySQL Workbench](https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.38-winx64.msi)
 - [Insomnia](https://updates.insomnia.rest/downloads/windows/latest?app=com.insomnia.app&source=website)
-
-# Entrando no projeto
+  
+</br>
+# Entrando no projeto 🚀
 Para entrar no projeto primeiramente abra o VS Code e utilize esse comando no terminal(para abrir o terminal é "ctrl" +
 "shift" + " ' "), e cole o comando a seguir e dê enter.
 
@@ -70,11 +72,14 @@ Após isso volte ao terminal do VS Code e crie um novo terminal no "+" e rode es
 ```bash
 node ace migration:run
 ```
-Após isso vá para o MySQL Workbench e rode as outras linhas, sem rodar a primeira nem a segunda, porém clickando naquele raiozinho</br>
+Após isso vá para o MySQL Workbench e rode as outras linhas, sem rodar a primeira nem a segunda, porém clickando naquele raiozinho ⚡</br>
 Pronto agora seu banco está configurado e com informações dos seeders!!</br>
 Próximo vai ser como testar a aplicação.
 
+</br>
 # Testando o projeto
+
+</br>
 ## Rotas de Login
 No seu insomnia utilize a rota para se registrar, com o metodo POST:
 ```bash
@@ -134,8 +139,8 @@ Destroy: Para desabilitar um cliente, com o metodo DELETE:
 ```bash
 localhost:3333/clients/2
 ```
-</br>
 
+</br>
 ## Rotas de Produto
 Index: Mostra todos os produtos ordenados por ordem alfabetica, com o metodo GET:
 ```bash
@@ -176,6 +181,7 @@ Destroy: Desabilita um produto, com o metodo DELETE.
 localhost:3333/products/2
 ```
 
+</br>
 ## Rota de Sale
 Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma lógica onde a cada venda diminui a quantidade de tal produto comprado, além do total_price ser somando automáticamente, com o metodo POST.
 ```bash
@@ -186,6 +192,7 @@ Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma
 	"unit_price": "20.50"
 }
 ```
+
 </br>
 O meu projeto acaba aqui, espero que tenha atendido as expectativas!! </br>
 Durante meu projeto usei como base um mapa mental que eu fiz no excalidraw https://excalidraw.com/#json=HZqxkIhVWPxezTs1Ut72m,QtvMbWZkZgwmxhLMoTLh6Q </br>
