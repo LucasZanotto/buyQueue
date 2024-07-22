@@ -7,6 +7,7 @@ Todos os links levam direto para o download.
 - [Node.js](https://nodejs.org/dist/v20.15.1/node-v20.15.1-x64.msi)
 - [MySQL](https://dev.mysql.com/get/Downloads/MySQL-8.4/mysql-8.4.1-winx64.msi)
 - [MySQL Workbench](https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.38-winx64.msi)
+- [Insomnia](https://updates.insomnia.rest/downloads/windows/latest?app=com.insomnia.app&source=website)
 
 # Entrando no projeto
 Para entrar no projeto primeiramente abra o VS Code e utilize esse comando no terminal(para abrir o terminal é "ctrl" +
@@ -35,7 +36,7 @@ Após isso rode esse comando para ligar o servidor
 ```bash
 adonis serve --dev
 ```
-Em seguida abra o MySQL Workbench, a senha para entrar será User: root, Password: root.
+Em seguida abra o MySQL Workbench, a senha para entrar será User: root, Password: root.</br>
 E Cole isso na Query:
 ```bash
 CREATE DATABASE adonis;
@@ -61,3 +62,37 @@ INSERT INTO sales (client_id, product_id, quantity, unit_price, total_price, dat
 (1, 1, 2, 20.20, 40.40, NOW()),
 (2, 2, 1, 40.40, 40.40, NOW());
 ```
+Você irá rodar a primeira linha individualmente selecionando apenas ela e pressionando "ctrl" + "Enter".</br>
+Em seguida você vai dar refresh no schema e clickar duas vezes no "adonis". Após isso volte ao terminal do VS Code e crie um novo terminal no "+" e rode esse comando:
+```bash
+node ace migration:run
+```
+Pronto agora seu banco está configurado e com informações dos seeders!!</br>
+Próximo vai ser como testar a aplicação.
+
+# Testando o projeto
+No seu insomnia utilize a rota para se registrar
+```bash
+localhost:3333/register
+```
+Com o body:
+```bash
+{
+	"email": "lucas@mail.com",
+	"password": "123456"
+} 
+```
+Logo em seguida use a rota login para pegar seu token de verificação.
+```bash
+localhost:3333/authenticate
+```
+Com o body:
+```bash
+{
+	"email": "lucas@mail.com",
+	"password": "123456"
+}
+```
+Lembre-se a aplicação é protegida pelo token JWT que você adquiriu agora, então a qualquer rota que for acessar use o Auth e na parte de token coloque o que foi recebido da response. Caso tenha alguma dúvida o type é "Bearer Token"
+</br>
+## Rotas de Cliente
