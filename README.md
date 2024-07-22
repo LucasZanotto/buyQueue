@@ -27,14 +27,14 @@ Em seguida vá até a pasta principal do App:
 cd .\buyQueue\back-end\
 ```
 
-Copie e cole os seguintes comandos para instalar as dependências:
+Copie e cole e de enter nos seguintes comandos para instalar as dependências:
 ```bash
 npm install -g @adonisjs/cli
 ```
 ```bash
 npm i
 ```
-Lembre de renomear o arquivo ".env.example" para apenas ".env". </br>
+⚠️Lembre de renomear o arquivo ".env.example" para apenas ".env".⚠️ </br>
 E caso já esteja usando a porta 3306 troque para outra de sua preferência. </br>
 Após isso rode esse comando para ligar o servidor.
 
@@ -74,17 +74,17 @@ Após isso volte ao terminal do VS Code e crie um novo terminal no "+" e rode es
 ```bash
 node ace migration:run
 ```
-Após isso vá para o MySQL Workbench e rode as outras linhas, sem rodar a primeira nem a segunda, porém clickando naquele raiozinho ⚡</br>
+Após isso vá para o MySQL Workbench e rode as outras linhas, sem rodar a primeira nem a segunda, ⚠️porém clickando naquele raiozinho ⚡⚠️</br>
 Pronto agora seu banco está configurado e com informações dos seeders!!</br>
 Próximo vai ser como testar a aplicação.
 
 </br>
 
-# Testando o projeto
+# Testando o projeto 🧪
 
 </br>
 
-## Rotas de Login
+## Rotas de Login 🔐
 No seu insomnia utilize a rota para se registrar, com o metodo POST:
 ```bash
 localhost:3333/register
@@ -111,7 +111,7 @@ Lembre-se a aplicação é protegida pelo token JWT que você adquiriu agora, en
 
 </br>
 
-## Rotas de Cliente
+## Rotas de Cliente 🧑‍🤝‍🧑
 Index: Lista todos os clientes ordenados pelo id, com o metodo GET:
 ```bash
 localhost:3333/clients
@@ -148,7 +148,7 @@ localhost:3333/clients/2
 
 </br>
 
-## Rotas de Produto
+## Rotas de Produto 📦
 Index: Mostra todos os produtos ordenados por ordem alfabetica, com o metodo GET:
 ```bash
 localhost:3333/products
@@ -190,7 +190,7 @@ localhost:3333/products/2
 
 </br>
 
-## Rota de Sale
+## Rota de Sale 💰
 Store: Cria uma venda para um cliente de um produto, nessa rota foi aplicado uma lógica onde a cada venda diminui a quantidade de tal produto comprado, além do total_price ser somando automáticamente, com o metodo POST.
 ```bash
 {
