@@ -30,7 +30,7 @@ npm install -g @adonisjs/cli
 ```bash
 npm i
 ```
-Lembre de renomear o ".env.example" para apenas .env apertando f2, e trocar o "DB_CONNECTION=" para "DB_CONNECTION=mysql2", além de colocar o "DB_PASSWORD=" para "DB_PASSWORD=root" e caso já esteja usando a porta 3306 troque para outra de sua preferência. </br>
+Lembre de renomear o ".env.example" para apenas ".env" apertando f2, e trocar o "DB_CONNECTION=" para "DB_CONNECTION=mysql2", além de colocar o "DB_PASSWORD=" para "DB_PASSWORD=root" e caso já esteja usando a porta 3306 troque para outra de sua preferência. </br>
 Após isso rode esse comando para ligar o servidor.
 
 ```bash
