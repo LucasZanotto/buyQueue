@@ -31,7 +31,7 @@ npm install -g @adonisjs/cli
 npm i
 ```
 
-Após isso rode esse comando para ligar o servidor
+Após isso rode esse comando para ligar o servidor.
 
 ```bash
 adonis serve --dev
