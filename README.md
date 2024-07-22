@@ -9,3 +9,6 @@ Todos os links levam direto para o download.
 
 # Entrando no projeto
 Para entrar no projeto primeiramente utilize
+```bash
+git clone https://github.com/LucasZanotto/buyQueue.git
+```
