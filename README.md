@@ -32,11 +32,11 @@ npm i
 ```
 Lembre de renomear o ".env.example" para apenas ".env" apertando f2, e trocar o "DB_CONNECTION=" para
 ```bash
-"DB_CONNECTION=mysql2"
+DB_CONNECTION=mysql2
 ```
 Além de colocar o "DB_PASSWORD=" para 
 ```bash
-"DB_PASSWORD=root"
+DB_PASSWORD=root
 ```
 E caso já esteja usando a porta 3306 troque para outra de sua preferência. </br>
 Após isso rode esse comando para ligar o servidor.
