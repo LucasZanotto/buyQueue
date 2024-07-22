@@ -30,14 +30,7 @@ npm install -g @adonisjs/cli
 ```bash
 npm i
 ```
-Lembre de renomear o ".env.example" para apenas ".env" apertando f2, e trocar o "DB_CONNECTION=" para:
-```bash
-DB_CONNECTION=mysql2
-```
-Além de colocar o "DB_PASSWORD=" para: 
-```bash
-DB_PASSWORD=root
-```
+Lembre de renomear o arquivo ".env.example" para apenas ".env". </br>
 E caso já esteja usando a porta 3306 troque para outra de sua preferência. </br>
 Após isso rode esse comando para ligar o servidor.
 
@@ -77,7 +70,7 @@ Após isso volte ao terminal do VS Code e crie um novo terminal no "+" e rode es
 ```bash
 node ace migration:run
 ```
-Após isso vá para o MySQL Workbench e rode as outras linhas, sem rodar a primeira nem a segunda.</br>
+Após isso vá para o MySQL Workbench e rode as outras linhas, sem rodar a primeira nem a segunda, porém clickando naquele raiozinho</br>
 Pronto agora seu banco está configurado e com informações dos seeders!!</br>
 Próximo vai ser como testar a aplicação.
 
@@ -108,11 +101,11 @@ Com o body:
 Lembre-se a aplicação é protegida pelo token JWT que você adquiriu agora, então a qualquer rota que for acessar use o Auth e na parte de token coloque o que foi recebido da response. Caso tenha alguma dúvida o type é o "Bearer Token".
 </br>
 ## Rotas de Cliente
-Index: Lista todos os clientes, com o metodo GET:
+Index: Lista todos os clientes ordenados pelo id, com o metodo GET:
 ```bash
 localhost:3333/clients
 ```
-Show: Detalha um cliente, com o metodo GET:
+Show: Detalha um cliente e suas vendas relacionadas são ordenadas de acordo com a mais recente, com o metodo GET:
 ```bash
 localhost:3333/clients/1
 ```
@@ -124,7 +117,7 @@ Request do body para criar:
 ```bash
 {
 	"name": "lucas",
-	"cpf": "lucas@mail.com"
+	"cpf": "777.777.777-77"
 }
 ```
 Update: Para atualizar algum campo do cliente, com o metodo PATCH:
@@ -144,7 +137,7 @@ localhost:3333/clients/2
 </br>
 
 ## Rotas de Produto
-Index: Mostra todos os produtos, com o metodo GET:
+Index: Mostra todos os produtos ordenados por ordem alfabetica, com o metodo GET:
 ```bash
 localhost:3333/products
 ```
